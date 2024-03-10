@@ -34,6 +34,9 @@ function Tajbi ({times,title,count,setCount,style}){
   const remove= () =>{
     setCount(count-1)
   }
+  const reset = ()=>{
+    setCount(count = 0);
+  }
   return (
     <div style={style}>
       <h3>{times} Times</h3>
@@ -42,6 +45,7 @@ function Tajbi ({times,title,count,setCount,style}){
       <button onClick={add}>Add</button>
       <button onClick={remove}>Remove</button>
       </div>
+      <button onClick={reset}>Reset</button>
     </div>
   )
 }
